@@ -35,19 +35,19 @@ try:
     st.caption(f"기준일: {trade_date}, 전일 대비: {diff}")
 except Exception:
     st.warning("자동 유가 조회에 실패했습니다. 수동으로 입력해 주세요.")
-    auto_price = 1700.0
+    auto_price = 2000.0
 
 fuel_price = st.number_input(
     "리터당 휘발유 가격 (원/L)",
     min_value=0.0,
     value=float(auto_price),
-    step=10.0
+    step=5.0
 )
 
 remaining_distance = st.number_input(
     "트립상 주행 가능 거리 (km)",
     min_value=0.0,
-    value=200.0,
+    value=250.0,
     step=10.0
 )
 
